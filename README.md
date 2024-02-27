@@ -26,7 +26,7 @@ You can install the required packages using pip.
 
 ### Usage
 
-1. Prepare your DNA sequences in FASTA format and, if available, your genome annotation file in GTF format.
+1. Prepare your DNA sequences in FASTA format and, if available.
 2. Update the script's parameters to point to your input files and specify desired output locations.
 3. Run the script from the command line.
 
@@ -58,13 +58,13 @@ Contributions to improve the script or add new features are welcome. Please fork
 
 If you use this tool in your research, please cite it as follows:
 
-> [Your Name]. Genome Marker Analysis Tool. [Year]. [URL to repository].
+> Enrique Caban Centeno. Genome Marker Analysis Tool. 2024. [URL to repository].
 
 This tool builds upon the work and methodologies from [Reference 1], [Reference 2], etc.
 
 ### Contact
 
-For further questions or collaborations, feel free to contact me at [your email address].
+For further questions or collaborations, feel free to contact me at centenoenrique1963@gmail.com.
 
 ### License
 
