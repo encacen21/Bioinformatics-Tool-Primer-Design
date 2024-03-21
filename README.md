@@ -1,4 +1,4 @@
-# TFM
+# BIOINFORMATICS TOOL FOR THE DESING OF AMPLICONS IN VIRUS SEQUENCING
 ## Genome Marker Analysis Tool
 
 ### Overview
