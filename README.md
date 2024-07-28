@@ -54,13 +54,6 @@ An example usage scenario might involve generating a consensus sequence from sev
 
 Contributions to improve the script or add new features are welcome. Please fork the repository and submit pull requests with your proposed changes. For reporting bugs or requesting features, please open an issue through the GitHub issue tracker.
 
-### Citing and References
-
-If you use this tool in your research, please cite it as follows:
-
-> Enrique Caban Centeno. Genome Marker Analysis Tool. 2024. [URL to repository].
-
-This tool builds upon the work and methodologies from [Reference 1], [Reference 2], etc.
 
 ### Contact
 
