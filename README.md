@@ -1,65 +1,114 @@
-# BIOINFORMATICS TOOL FOR THE DESING OF AMPLICONS IN VIRUS SEQUENCING
-## Genome Marker Analysis Tool
+# GenomeMarker: Primer Design and Consensus Sequence Workflow
 
-### Overview
+GenomeMarker is a Python-based bioinformatics workflow for generating consensus sequences from aligned genomic FASTA files, designing overlapping amplicon primer schemes, estimating simple primer melting temperature values, and exporting analysis-ready outputs.
 
-This Python script is designed for the analysis and optimization of DNA sequences for primer design, consensus sequence generation, and genome annotation visualization. It allows users to process multiple DNA sequences, identify optimal primers, generate consensus sequences, and visualize annotations on genomic sequences. This tool integrates functionalities for reading and processing genome records, optimizing primer sequences based on melting temperatures, extending primers to achieve desired Tm values, batch processing of primers, and exporting results.
+This repository was originally developed as part of a Master's project in Bioinformatics. It is presented here as a portfolio example of sequence processing, primer-design logic, reproducible scientific scripting, and bioinformatics workflow organization.
 
-### Features
+## Overview
 
-- **Primer Optimization**: Select and optimize primers based on specific criteria such as melting temperature (Tm) and Tm differences between forward and reverse primers.
-- **Consensus Sequence Generation**: Generate a consensus sequence from multiple DNA sequences to identify common nucleotides or patterns.
-- **Genome Annotation Visualization**: Visualize annotations on genomic sequences, providing insights into the distribution and characteristics of genes or features.
-- **Batch Primer Processing**: Facilitate the processing of primers in batches, applying different optimization criteria or steps for each batch.
-- **Exporting Results**: Export optimized primers, their degeneracy scores, and genome annotations to text and Excel files for further analysis.
+The workflow supports primer-design tasks from aligned FASTA sequences. It can generate a consensus sequence from one or more aligned genomic records, handle IUPAC ambiguity codes, place primer pairs across a target sequence, evaluate primer properties, support optimization logic, estimate primer degeneracy, and prepare outputs that can be reused in downstream analysis or reporting.
 
-### Installation
+This project is intended as an educational and research-oriented workflow example. Primer candidates generated computationally should always be reviewed with dedicated primer-design software and validated experimentally before laboratory use.
 
-Before running this script, ensure you have Python 3.x installed along with the following packages:
+## Main Features
+
+- Consensus sequence generation from aligned FASTA records
+- IUPAC ambiguity handling for variable genomic positions
+- Overlapping amplicon primer-design logic
+- Forward and reverse primer placement
+- Basic melting temperature estimation
+- Primer quality checks and optimization logic
+- Primer degeneracy scoring
+- Sequence visualization and reporting support
+- Export of analysis-ready outputs
+
+## Technologies Used
+
+- Python
 - Biopython
-- gffutils
-- matplotlib
-- numpy
 - pandas
+- Matplotlib
+- ReportLab
+- openpyxl
 
-You can install the required packages using pip.
+## Repository Structure
 
-### Usage
+Bioinformatics-Tool-Primer-Design/
+- README.md
+- requirements.txt
+- .gitignore
+- src/genome_marker.py
+- examples/expected_output/
+- docs/
 
-1. Prepare your DNA sequences in FASTA format and, if available.
-2. Update the script's parameters to point to your input files and specify desired output locations.
-3. Run the script from the command line.
+## Installation
 
-### Key Classes and Functions
+Clone the repository:
 
-#### Class: `GenomeMarker`
+git clone https://github.com/encacen21/Bioinformatics-Tool-Primer-Design.git
+cd Bioinformatics-Tool-Primer-Design
 
-##### `__init__(self, sequences=None, gtf_file=None)`
-Initializes the GenomeMarker object with sequences and optionally a genome annotation file.
+Create and activate a Python environment:
 
-##### `generate_consensus_or_return_sequence(self)`
-Generates a consensus sequence if multiple genome records are provided; otherwise, returns the single sequence.
+python3 -m venv .venv
+source .venv/bin/activate
 
-##### `generate_consensus(self)`
-Calculates a consensus sequence by analyzing the nucleotide composition at each position across all provided sequences.
+Install dependencies:
 
-##### `save_sequences_with_consensus_to_fasta(self, output_filename)`
-Saves the consensus sequence and, if applicable, the original sequences to a FASTA file.
+pip install -r requirements.txt
 
-### Examples
+## Example Usage
 
-An example usage scenario might involve generating a consensus sequence from several aligned DNA sequences and then visualizing the distribution of specific primer sequences along the consensus.
+The current script is a research prototype and may require manual input depending on the workflow configuration. A cleaned command-line interface and mock example dataset are planned as part of future improvements.
 
-### Contributing
+The main workflow code is located in:
 
-Contributions to improve the script or add new features are welcome. Please fork the repository and submit pull requests with your proposed changes. For reporting bugs or requesting features, please open an issue through the GitHub issue tracker.
+src/genome_marker.py
 
+## Expected Outputs
 
-### Contact
+Depending on the selected workflow configuration, the script can generate outputs such as:
 
-For further questions or collaborations, feel free to contact me at centenoenrique1963@gmail.com.
+- consensus FASTA sequences
+- primer tables
+- primer batch summaries
+- primer degeneracy scores
+- Excel summary files
+- sequence or primer visualization outputs
+- report-ready files for downstream review
 
-### License
+## Limitations
 
-This script is provided under the MIT License. See the LICENSE file for more details.
+This repository is a portfolio and research workflow example, not a replacement for experimental primer validation.
 
+Current limitations include:
+
+- simple rule-based melting temperature estimation
+- no full thermodynamic primer-specificity model
+- no complete off-target search workflow
+- no wet-lab validation
+- assumes aligned input sequences
+- may require manual review of ambiguous or gapped regions
+- currently structured as a research prototype rather than a production package
+
+## Future Improvements
+
+Planned improvements include:
+
+- adding a small mock FASTA example
+- adding expected output files
+- creating a command-line interface with argparse
+- adding lightweight tests for core functions
+- improving modular structure
+- adding workflow diagrams and usage examples
+
+## Author
+
+Enrique A. Caban Centeno  
+PhD researcher and bioinformatics analyst
+
+Focus areas: RNA/miRNA analysis, sequence analysis, biological annotation, qPCR data processing, reproducible Python/R workflows, and omics-style data analysis.
+
+## License
+
+This project is released under the MIT License. See the LICENSE file for details.
