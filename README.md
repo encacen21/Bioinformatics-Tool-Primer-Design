@@ -33,37 +33,62 @@ This project is intended as an educational and research-oriented workflow exampl
 
 ## Repository Structure
 
+```text
 Bioinformatics-Tool-Primer-Design/
-- README.md
-- requirements.txt
-- .gitignore
-- src/genome_marker.py
-- examples/expected_output/
-- docs/
+├── README.md
+├── requirements.txt
+├── LICENSE
+├── .gitignore
+├── src/
+│   └── genome_marker.py
+├── examples/
+│   ├── README.md
+│   ├── example_alignment.fasta
+│   └── expected_output/
+└── docs/
+```
 
 ## Installation
 
 Clone the repository:
 
+```bash
 git clone https://github.com/encacen21/Bioinformatics-Tool-Primer-Design.git
 cd Bioinformatics-Tool-Primer-Design
+```
 
 Create and activate a Python environment:
 
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
+
+## Example Data
+
+A small synthetic aligned FASTA file is provided in:
+
+```text
+examples/example_alignment.fasta
+```
+
+This mock file is included only to demonstrate the expected input format. It is not derived from unpublished research data.
 
 ## Example Usage
 
-The current script is a research prototype and may require manual input depending on the workflow configuration. A cleaned command-line interface and mock example dataset are planned as part of future improvements.
+The current script is a research prototype and may require manual input depending on the workflow configuration. A cleaned command-line interface is planned as part of future improvements.
 
 The main workflow code is located in:
 
+```text
 src/genome_marker.py
+```
 
 ## Expected Outputs
 
@@ -95,8 +120,7 @@ Current limitations include:
 
 Planned improvements include:
 
-- adding a small mock FASTA example
-- adding expected output files
+- expanding the mock FASTA example with expected output files
 - creating a command-line interface with argparse
 - adding lightweight tests for core functions
 - improving modular structure
